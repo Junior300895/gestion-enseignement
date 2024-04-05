@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 04 avr. 2024 à 23:55
+-- Généré le : ven. 05 avr. 2024 à 02:36
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.2.4
 
@@ -20,6 +20,27 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `enseignements`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `compte`
+--
+
+CREATE TABLE `compte` (
+  `login` varchar(100) NOT NULL,
+  `mot_de_passe` varchar(100) NOT NULL,
+  `roles` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `compte`
+--
+
+INSERT INTO `compte` (`login`, `mot_de_passe`, `roles`) VALUES
+('magattediawara@esp.sn', 'passer', 'Etudiant'),
+('boubacardiouf@esp.sn', 'passer', 'responsable_pedagogique'),
+('aissatoufofana@esp.sn', 'passer', 'responsable_classe');
 
 -- --------------------------------------------------------
 
