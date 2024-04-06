@@ -57,7 +57,6 @@ class Compte {
         // prepare query statement
         $stmt = $this->oConnexion->prepare($query);
 
-        // bind id of product to be updated
         $stmt->bindParam(":login", $this->login);
         $stmt->bindParam(":password", $this->mot_de_passe);
         // execute query

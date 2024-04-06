@@ -10,7 +10,7 @@ header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
-header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+// header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
 include_once '../config/Database.class.php';
 include_once '../modeles/Etudiant.class.php';
@@ -23,11 +23,7 @@ $oBDD = $oDatabase->getConnexion();
 $oEtudiant = new Etudiant($oBDD);
 
 if(
-    isset($_POST['nom']) &&
-    isset($_POST['prenom']) &&
-    isset($_POST['AdresseMail']) &&
-    isset($_POST['DateNaissance']) &&
-    isset($_POST['specialisation'])
+    isset($_POST['nom'])
 ) {
 
     $oEtudiant->nom = $_POST['nom'];
